@@ -59,4 +59,29 @@
 //   document.querySelector('.guess').value = '';
 // });
 
-console.log(document.querySelector('.message').textContent);
+// Final tweaks if time permits
+// 1. make sure the guessed value is not empty or less or above then min max value
+
+// step 1 changing start guessing to correct answer
+
+let luckyNumber = 5;
+let score = 20;
+let finalDisplayMessage = document.querySelector('.message').textContent;
+
+// adding click event handler for the check button then getting the guessed value
+
+document.querySelector('.check').addEventListener('click', function () {
+  let guessedUserValue = Number(document.querySelector('.guess').value);
+  if (guessedUserValue === luckyNumber) {
+    document.querySelector('.message').textContent = 'Correct Answer🎉';
+    console.log(finalDisplayMessage);
+    document.querySelector('.score').value = score;
+    document.querySelector('.number').textContent = luckyNumber;
+    document.body.style.backgroundColor = 'red';
+  } else {
+    document.querySelector('.message').textContent = 'Wrong Answer';
+    console.log(finalDisplayMessage);
+    score = score - 1;
+    document.querySelector('.score').textContent = score;
+  }
+});
