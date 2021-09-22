@@ -48,16 +48,16 @@ document.querySelector('.check').addEventListener('click', function () {
   }
 });
 
-// document.querySelector('.again').addEventListener('click', function () {
-//   score = 20;
-//   document.querySelector('.score').textContent = score;
-//   secretNumber = Math.trunc(Math.random() * 20) + 1;
-//   console.log(secretNumber);
-//   document.querySelector('body').style.backgroundColor = 'rgb(34,34,34)';
-//   document.querySelector('.number').textContent = '?';
-//   document.querySelector('.message').textContent = 'Start Guessing';
-//   document.querySelector('.guess').value = '';
-// });
+document.querySelector('.again').addEventListener('click', function () {
+  score = 20;
+  document.querySelector('.score').textContent = score;
+  secretNumber = Math.trunc(Math.random() * 20) + 1;
+  console.log(secretNumber);
+  document.querySelector('body').style.backgroundColor = 'rgb(34,34,34)';
+  document.querySelector('.number').textContent = '?';
+  document.querySelector('.message').textContent = 'Start Guessing';
+  document.querySelector('.guess').value = '';
+});
 
 // Final tweaks if time permits
 // 1. make sure the guessed value is not empty or less or above then min max value
